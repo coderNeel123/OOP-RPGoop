@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OOP_Class_RPGoop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,235 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="MZw-JB-7aq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="b4Q-gG-Z9x">
+                                <rect key="frame" x="0.0" y="540" width="580" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="580" id="mq8-5Q-3pT"/>
+                                    <constraint firstAttribute="height" constant="60" id="tW9-Sv-Cnj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="zbe-9l-P48">
+                                <rect key="frame" x="265" y="540" width="580" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="580" id="b4u-l1-em4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="580" id="fZb-2c-CwQ"/>
+                                    <constraint firstAttribute="height" constant="60" id="otQ-8c-JkY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="ziY-2T-NcI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text-holder" translatesAutoresizingMaskIntoConstraints="NO" id="fIm-Zq-fxb">
+                                <rect key="frame" x="125" y="547" width="349" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="349" id="kwt-xa-RYK"/>
+                                    <constraint firstAttribute="height" constant="45" id="nLj-5d-ZN1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Attack Button to Attack!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMQ-gi-gHG" userLabel="textLabel">
+                                <rect key="frame" x="151" y="559" width="302" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="88f-5n-ogJ"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="U3N-tx-zBw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fit-zY-oyO" userLabel="player2Button">
+                                <rect key="frame" x="314" y="20" width="248.5" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="aAv-f6-Qhm"/>
+                                    <constraint firstAttribute="width" constant="248.5" id="amk-MD-era"/>
+                                </constraints>
+                                <state key="normal" image="player2attackbtn"/>
+                                <connections>
+                                    <action selector="player2AttackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FL-Pv-Vtg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pb8-yB-5bV" userLabel="player1Button">
+                                <rect key="frame" x="37" y="20" width="248.5" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="Vcw-Eo-bZF"/>
+                                    <constraint firstAttribute="width" constant="248.5" id="qBF-BY-2IA"/>
+                                </constraints>
+                                <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="player1AttackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nRh-oJ-xVd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="vfz-DW-zSC">
+                                <rect key="frame" x="348" y="346" width="181" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="194" id="Cb2-5g-kTd"/>
+                                    <constraint firstAttribute="width" constant="181" id="DfG-5t-f9l"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="Nxr-uS-Up3">
+                                <rect key="frame" x="71" y="346" width="181" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="194" id="8DM-zu-LZy"/>
+                                    <constraint firstAttribute="width" constant="181" id="IMM-4B-qeh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hO-58-EG5">
+                                <rect key="frame" x="100" y="47" width="122" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Y5A-mX-wGo"/>
+                                    <constraint firstAttribute="width" constant="122" id="rDk-1T-3a9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbJ-LQ-VVV">
+                                <rect key="frame" x="378" y="47" width="122" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="Wxi-aM-6q3"/>
+                                    <constraint firstAttribute="height" constant="29" id="x66-07-1gC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSF-Tt-Zq8">
+                                <rect key="frame" x="210" y="369" width="81" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="cbT-ey-eC8"/>
+                                    <constraint firstAttribute="width" constant="81" id="cdL-io-o8n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sne-BP-m4i">
+                                <rect key="frame" x="309" y="369" width="81" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="9yT-Xv-cCb"/>
+                                    <constraint firstAttribute="height" constant="31" id="lBN-tg-gxz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Player Won!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alt-mg-a8I">
+                                <rect key="frame" x="83" y="253" width="434" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="ol2-cq-tkz"/>
+                                    <constraint firstAttribute="width" constant="434" id="pNk-Fj-9f2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uch-Qj-Hfd">
+                                <rect key="frame" x="193" y="198" width="213" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="213" id="LkB-rr-W6v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="RESTART">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SdH-Rm-4ZZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2 - Orc or Soldier?" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Rvs-uF-S6E">
+                                <rect key="frame" x="406" y="311" width="174" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IrJ-ow-lAx"/>
+                                    <constraint firstAttribute="width" constant="174" id="adD-u4-bOS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1 - Orc or Soldier?" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-td-BS3">
+                                <rect key="frame" x="20" y="311" width="174" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SRz-9K-bRD"/>
+                                    <constraint firstAttribute="width" constant="174" id="ejZ-Ge-lJj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="alt-mg-a8I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0cl-4y-3Is"/>
+                            <constraint firstItem="Rvs-uF-S6E" firstAttribute="centerY" secondItem="kxp-td-BS3" secondAttribute="centerY" id="1uf-w4-scu"/>
+                            <constraint firstItem="fit-zY-oyO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2Uv-1p-rdG"/>
+                            <constraint firstAttribute="trailing" secondItem="Rvs-uF-S6E" secondAttribute="trailing" constant="20" id="2f2-jV-dkJ"/>
+                            <constraint firstItem="Nxr-uS-Up3" firstAttribute="centerX" secondItem="Pb8-yB-5bV" secondAttribute="centerX" id="3Ek-Gw-jGx"/>
+                            <constraint firstItem="Pb8-yB-5bV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6hb-2M-RkO"/>
+                            <constraint firstItem="kxp-td-BS3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7Mc-4Q-3yh"/>
+                            <constraint firstItem="0hO-58-EG5" firstAttribute="centerX" secondItem="Pb8-yB-5bV" secondAttribute="centerX" id="8Cr-Wr-3j5"/>
+                            <constraint firstItem="tMQ-gi-gHG" firstAttribute="centerY" secondItem="fIm-Zq-fxb" secondAttribute="centerY" id="Amx-vO-QiD"/>
+                            <constraint firstItem="alt-mg-a8I" firstAttribute="top" secondItem="uch-Qj-Hfd" secondAttribute="bottom" constant="-5" id="BTa-hA-s7b"/>
+                            <constraint firstAttribute="trailing" secondItem="vfz-DW-zSC" secondAttribute="trailing" constant="71" id="BpY-z4-67V"/>
+                            <constraint firstItem="zbe-9l-P48" firstAttribute="top" secondItem="PSF-Tt-Zq8" secondAttribute="bottom" constant="140" id="DJD-8M-ow7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MZw-JB-7aq" secondAttribute="bottom" id="Fxz-nX-pVH"/>
+                            <constraint firstItem="KbJ-LQ-VVV" firstAttribute="centerX" secondItem="fit-zY-oyO" secondAttribute="centerX" id="GD2-E4-I8n"/>
+                            <constraint firstItem="Nxr-uS-Up3" firstAttribute="top" secondItem="kxp-td-BS3" secondAttribute="bottom" constant="5" id="L4O-jh-sXY"/>
+                            <constraint firstItem="vfz-DW-zSC" firstAttribute="top" secondItem="Rvs-uF-S6E" secondAttribute="bottom" constant="5" id="NNf-Ap-tuj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zbe-9l-P48" secondAttribute="trailing" constant="-265" id="PQn-o9-Sa3"/>
+                            <constraint firstItem="alt-mg-a8I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PsW-JW-cBF"/>
+                            <constraint firstItem="b4Q-gG-Z9x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RZ2-zd-h8p"/>
+                            <constraint firstItem="tMQ-gi-gHG" firstAttribute="centerX" secondItem="fIm-Zq-fxb" secondAttribute="centerX" constant="2" id="Ryk-tU-ZUX"/>
+                            <constraint firstItem="MZw-JB-7aq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uxh-v1-dzQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Nxr-uS-Up3" secondAttribute="bottom" constant="60" id="VUw-b0-sid"/>
+                            <constraint firstItem="vfz-DW-zSC" firstAttribute="centerX" secondItem="fit-zY-oyO" secondAttribute="centerX" id="Yat-gw-Aw5"/>
+                            <constraint firstItem="Nxr-uS-Up3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="71" id="Z5B-KW-Qvh"/>
+                            <constraint firstItem="uch-Qj-Hfd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZWF-kt-l9v"/>
+                            <constraint firstItem="fIm-Zq-fxb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f0i-X7-Ac5"/>
+                            <constraint firstAttribute="trailing" secondItem="MZw-JB-7aq" secondAttribute="trailing" id="fQg-4E-z0n"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vfz-DW-zSC" secondAttribute="bottom" constant="60" id="ii2-Nd-thu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b4Q-gG-Z9x" secondAttribute="bottom" id="kXw-Zd-Dax"/>
+                            <constraint firstItem="KbJ-LQ-VVV" firstAttribute="centerY" secondItem="fit-zY-oyO" secondAttribute="centerY" constant="-3" id="kY4-kw-tkA"/>
+                            <constraint firstItem="PSF-Tt-Zq8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="210" id="kZ7-Gb-Q1W"/>
+                            <constraint firstItem="zbe-9l-P48" firstAttribute="top" secondItem="Sne-BP-m4i" secondAttribute="bottom" constant="140" id="o8W-0b-H1W"/>
+                            <constraint firstItem="MZw-JB-7aq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pP2-cs-1Tc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fIm-Zq-fxb" secondAttribute="bottom" constant="7.5" id="pyb-6c-gUN"/>
+                            <constraint firstItem="fit-zY-oyO" firstAttribute="centerY" secondItem="Pb8-yB-5bV" secondAttribute="centerY" id="q69-bJ-2Dz"/>
+                            <constraint firstAttribute="trailing" secondItem="b4Q-gG-Z9x" secondAttribute="trailing" id="r5D-JR-plr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zbe-9l-P48" secondAttribute="bottom" id="rEy-re-Cev"/>
+                            <constraint firstAttribute="trailing" secondItem="Sne-BP-m4i" secondAttribute="trailing" constant="210" id="wLj-h5-WAa"/>
+                            <constraint firstItem="0hO-58-EG5" firstAttribute="centerY" secondItem="Pb8-yB-5bV" secondAttribute="centerY" constant="-3" id="y7W-dq-bfB"/>
+                            <constraint firstItem="Sne-BP-m4i" firstAttribute="centerY" secondItem="PSF-Tt-Zq8" secondAttribute="centerY" id="zNr-gS-iec"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="r5D-JR-plr"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="tMQ-gi-gHG" id="lUs-dS-CRW"/>
+                        <outlet property="player1Hp" destination="PSF-Tt-Zq8" id="pi4-WV-MVu"/>
+                        <outlet property="player1Image" destination="Nxr-uS-Up3" id="yCX-gK-YPB"/>
+                        <outlet property="player1TextField" destination="kxp-td-BS3" id="RzW-s3-fE1"/>
+                        <outlet property="player2Hp" destination="Sne-BP-m4i" id="lO7-8r-QSK"/>
+                        <outlet property="player2Image" destination="vfz-DW-zSC" id="NvL-3z-97j"/>
+                        <outlet property="player2TextField" destination="Rvs-uF-S6E" id="jtg-zB-Wyr"/>
+                        <outlet property="restartButton" destination="uch-Qj-Hfd" id="qTW-8S-4pr"/>
+                        <outlet property="winningLabel" destination="alt-mg-a8I" id="obC-da-NE8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="308"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="1024" height="677"/>
+        <image name="enemy" width="241" height="348"/>
+        <image name="ground" width="1024" height="106"/>
+        <image name="player" width="406" height="441"/>
+        <image name="player1attackbtn" width="212" height="78"/>
+        <image name="player2attackbtn" width="212" height="78"/>
+        <image name="text-holder" width="696" height="106"/>
+    </resources>
 </document>

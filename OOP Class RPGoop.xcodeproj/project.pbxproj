@@ -12,6 +12,10 @@
 		189CD2251D42980700C4BC0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189CD2231D42980700C4BC0C /* Main.storyboard */; };
 		189CD2271D42980700C4BC0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189CD2261D42980700C4BC0C /* Assets.xcassets */; };
 		189CD22A1D42980700C4BC0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189CD2281D42980700C4BC0C /* LaunchScreen.storyboard */; };
+		189CD2321D42A2A400C4BC0C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CD2311D42A2A400C4BC0C /* Character.swift */; };
+		189CD2341D42A49F00C4BC0C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CD2331D42A49F00C4BC0C /* Player.swift */; };
+		189CD2361D42CA0500C4BC0C /* geronimo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 189CD2351D42CA0500C4BC0C /* geronimo.m4a */; };
+		189CD2381D42CA3F00C4BC0C /* attack.wav in Resources */ = {isa = PBXBuildFile; fileRef = 189CD2371D42CA3F00C4BC0C /* attack.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		189CD2261D42980700C4BC0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189CD2291D42980700C4BC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		189CD22B1D42980700C4BC0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189CD2311D42A2A400C4BC0C /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		189CD2331D42A49F00C4BC0C /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		189CD2351D42CA0500C4BC0C /* geronimo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = geronimo.m4a; sourceTree = "<group>"; };
+		189CD2371D42CA3F00C4BC0C /* attack.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = attack.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +62,16 @@
 		189CD21E1D42980700C4BC0C /* OOP Class RPGoop */ = {
 			isa = PBXGroup;
 			children = (
+				189CD2371D42CA3F00C4BC0C /* attack.wav */,
+				189CD2351D42CA0500C4BC0C /* geronimo.m4a */,
 				189CD21F1D42980700C4BC0C /* AppDelegate.swift */,
 				189CD2211D42980700C4BC0C /* ViewController.swift */,
 				189CD2231D42980700C4BC0C /* Main.storyboard */,
 				189CD2261D42980700C4BC0C /* Assets.xcassets */,
 				189CD2281D42980700C4BC0C /* LaunchScreen.storyboard */,
 				189CD22B1D42980700C4BC0C /* Info.plist */,
+				189CD2311D42A2A400C4BC0C /* Character.swift */,
+				189CD2331D42A49F00C4BC0C /* Player.swift */,
 			);
 			path = "OOP Class RPGoop";
 			sourceTree = "<group>";
@@ -96,6 +108,7 @@
 				TargetAttributes = {
 					189CD21B1D42980700C4BC0C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 253ET55U8L;
 					};
 				};
 			};
@@ -122,8 +135,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189CD2361D42CA0500C4BC0C /* geronimo.m4a in Resources */,
 				189CD22A1D42980700C4BC0C /* LaunchScreen.storyboard in Resources */,
 				189CD2271D42980700C4BC0C /* Assets.xcassets in Resources */,
+				189CD2381D42CA3F00C4BC0C /* attack.wav in Resources */,
 				189CD2251D42980700C4BC0C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189CD2341D42A49F00C4BC0C /* Player.swift in Sources */,
+				189CD2321D42A2A400C4BC0C /* Character.swift in Sources */,
 				189CD2221D42980700C4BC0C /* ViewController.swift in Sources */,
 				189CD2201D42980700C4BC0C /* AppDelegate.swift in Sources */,
 			);
@@ -249,10 +266,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "OOP Class RPGoop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SimpleStuff.OOP-Class-RPGoop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +280,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "OOP Class RPGoop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SimpleStuff.OOP-Class-RPGoop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
